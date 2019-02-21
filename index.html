@@ -5,8 +5,14 @@
 <script type="text/babel">
 const rootElement = document.getElementById('root')
 const helloWorld = <h2>Hello, React world!</h2>
+const goodByeWorld = <h2>Goodbye, React world!</h2>
+const message = (props) => {
+ return <h2>{props.msg}</h2>
+}
 const element = (
 <div className="container">
+ {message({msg: `Hello, React world!`})}
+ {message({msg: `Goodbye, React world!`})}
 </div>
 )
 ReactDOM.render(element, rootElement)
